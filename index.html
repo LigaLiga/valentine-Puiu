@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will you be my Valentine? 💘</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .no {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- YouTube Music Embed (Lost On You - LP) -->
+  <iframe width="0" height="0"
+    src="https://www.youtube.com/embed/hn3wJ1_1Zsg?autoplay=1&loop=1&playlist=hn3wJ1_1Zsg"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
+  <div class="card">
+    <h1>Will you be my Valentine? 💖</h1>
+    <button class="yes" onclick="yesClick()">YES 💘</button>
+    <button class="no" onmouseover="moveNo()">NO 💔</button>
+  </div>
+
+  <script>
+    function yesClick() {
+      alert("Yaaaay! 💕 I knew it!");
+    }
+
+    function moveNo() {
+      const btn = document.querySelector(".no");
+      btn.style.left = Math.random() * (window.innerWidth - btn.offsetWidth) + "px";
+      btn.style.top = Math.random() * (window.innerHeight - btn.offsetHeight) + "px";
+    }
+  </script>
+</body>
+</html>
